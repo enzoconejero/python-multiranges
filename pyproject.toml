@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "multiranges"
+description = "Python Package to generate ranges of multiple values"
+dynamic = ["version"]
+requires-python = ">3.7"
+readme = "README.md"
+authors = [
+    {'name'="Enzo Conejero", 'email'="enzoconejero0@gmail.com"},
+]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+]
+
+[tool.setuptools.dynamic.version]
+attr = 'multiranges.__version__'
+
+[project.optional-dependencies]
+test = ["pytest"]
+dev = ["build", "twine"]
+
+[project.urls]
+Homepage = "https://github.com/enzoconejero/python-multiranges"
